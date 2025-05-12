@@ -72,6 +72,11 @@ logger = logging.getLogger(__name__)
 # Supported image formats
 SUPPORTED_TYPES = ["image/jpeg", "image/png", "image/webp"]
 
+@app.get("/")
+def home():
+    return {"message": "Welcome to AI Background Remover API"}
+
+
 @app.post("/remove-bg")
 async def remove_bg(file: UploadFile = File(...)):
     try:
