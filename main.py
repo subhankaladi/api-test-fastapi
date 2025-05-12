@@ -59,7 +59,7 @@ app = FastAPI(title="AI Background Remover")
 # CORS Middleware ko configure karna
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend ka origin (port adjust karein agar alag hai)
+    allow_origins=["https://bg-remover-frontendtest.vercel.app/"],  # Frontend ka origin (port adjust karein agar alag hai)
     allow_credentials=True,
     allow_methods=["*"],  # Sabhi HTTP methods allow karna (POST, GET, etc.)
     allow_headers=["*"],  # Sabhi headers allow karna
